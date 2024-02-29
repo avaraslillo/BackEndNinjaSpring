@@ -1,0 +1,25 @@
+spring:
+  aop:
+    auto: true
+    proxy-target-class: false
+  messages:
+    always-use-message-format: false
+    basename: messages
+  mvc:
+    dispatch-options-request: true
+    dispatch-trace-request: false
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: true
+
+
+  banner:
+    location: classpath:banner.txt
+
+
+
+        
+    
