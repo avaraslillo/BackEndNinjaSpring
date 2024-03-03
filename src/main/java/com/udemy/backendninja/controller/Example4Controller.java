@@ -10,7 +10,7 @@ import org.springframework.web.servlet.View;
 @RequestMapping("/example4")
 public class Example4Controller {
 
-    public static final String ERROR_404="500";
+    public static final String ERROR_404="/error/404";
     @GetMapping("/simpleView")
     public String simpleView(){
         return ERROR_404;

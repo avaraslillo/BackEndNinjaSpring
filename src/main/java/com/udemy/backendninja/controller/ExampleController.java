@@ -44,6 +44,7 @@ public class ExampleController {
     public ModelAndView exampleMAV(){
         ModelAndView mav = new ModelAndView(EXAMPLE_VIEW);
         mav.addObject("people",exampleService.getListPeople());
+        
         return mav;
     }
 
