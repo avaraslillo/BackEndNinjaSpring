@@ -35,16 +35,16 @@ public class LoginController {
             return ViewConstant.LOGIN;
     }
 
-    @PostMapping("/logincheck")
-    public String loginCheck(@ModelAttribute(name="userCredentials") UserCredentials userCredentials){
-        LOG.info("METHOD showLoginForm() -- PARAMS: error = "+userCredentials.toString());  
-        if(userCredentials.getUsername().equals("user") && userCredentials.getPassword().equals("user")){
-            
-            LOG.info("Returning to contacts view"); 
-            return ViewConstant.CONTACTS;
-        }
-        LOG.info("Returning to loginError"); 
-        return "redirect:/login?error";
+    @GetMapping({"/loginsuccess","/"})
+    public String loginCheck(){
+        //LOG.info("METHOD showLoginForm() -- PARAMS: error = "+userCredentials.toString());  
+        //if(userCredentials.getUsername().equals("user") && userCredentials.getPassword().equals("user")){
+        LOG.info("METHOD loginCheck()");    
+        LOG.info("Returning to contacts view"); 
+        return "redirect:/contacts/showcontacts";
+        //}
+        //LOG.info("Returning to loginError"); 
+        //return "redirect:/login?error";
         
     }
 }

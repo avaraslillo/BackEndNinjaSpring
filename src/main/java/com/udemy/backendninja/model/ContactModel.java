@@ -12,6 +12,10 @@ public class ContactModel {
     private String telephone;
     private String city;
 
+    
+    /** 
+     * @return String
+     */
     public String getFirstname() {
         return firstname;
     }
