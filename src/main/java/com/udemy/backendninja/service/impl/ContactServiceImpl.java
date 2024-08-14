@@ -55,7 +55,7 @@ public class ContactServiceImpl implements ContactService{
     public void removeContact(int id) {
        Contact contact = findContactById(id);
        if(null != contact){
-            contactRepository.delete(findContactById(id));
+            contactRepository.delete(contact);
        }
         
     }
